@@ -1,7 +1,7 @@
 # dotnet-graphql-todoapp
  EF CORE, SQLITE, GRAPHQL, ASPNET CORE
 
-dotnet new web -n dotnet-graphql-todoapp
+dotnet new webapi -n dotnet-graphql-todoapp
 
 dotnet new class -n Todo -o Models 
 
