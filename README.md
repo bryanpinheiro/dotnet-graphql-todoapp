@@ -3,8 +3,6 @@
 
 dotnet new webapi -n dotnet-graphql-todoapp
 
-dotnet new class -n Todo -o Models 
+dotnet new class -n Todo -o Entity 
 
 dotnet add package HotChocolate.AspNetCore
-
-dotnet add package HotChocolate.AspNetCore.Playground
