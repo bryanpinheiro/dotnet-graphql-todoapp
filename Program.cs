@@ -3,14 +3,17 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<TodoDb>(options =>
-{
-  options.UseSqlite("Data Source=database/todo.db");
-});
+builder.Services.AddPooledDbContextFactory<DatabaseContext>(
+  options => options.UseSqlite("Data Source=database/todo.db")
+);
+
+builder.Services.AddTransient<ITodoRepository, TodoRepository>();
 
 builder.Services
   .AddGraphQLServer()
-  .AddQueryType<TodoQuery>();
+  .RegisterService<ITodoRepository>()
+  .AddQueryType<TodoQuery>()
+  .AddMutationType<TodoMutation>();
 
 var app = builder.Build();
 

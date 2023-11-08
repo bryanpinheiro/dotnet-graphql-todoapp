@@ -8,8 +8,8 @@ using dotnet_graphql_todoapp;
 
 namespace dotnet_graphql_todoapp.Migrations
 {
-    [DbContext(typeof(TodoDb))]
-    partial class TodoDbModelSnapshot : ModelSnapshot
+    [DbContext(typeof(DatabaseContext))]
+    partial class DatabaseContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

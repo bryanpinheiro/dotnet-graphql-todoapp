@@ -9,8 +9,8 @@ using dotnet_graphql_todoapp;
 
 namespace dotnet_graphql_todoapp.Migrations
 {
-    [DbContext(typeof(TodoDb))]
-    [Migration("20231106212033_InitialCreate")]
+    [DbContext(typeof(DatabaseContext))]
+    [Migration("20231108025809_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
